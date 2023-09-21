@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css선택자연습</title>
+  <style>
+    /*선택자{속성:값;}*/
+    /* div.container{background-color: #ccc;} */
+    .container{background-color: #ccc;
+    padding: 50px}
+
+    /* 문서내 모든 section태그 배경색 파랑색 */
+    section{background-color: #00f;}
+      /* section#section1의 배경색을 빨강색 */
+    #section1{background-color: #f00;}
+
+
+      /* #section2 자식p태그 배경색 초록색 */
+      section#section2>p{background-color: #0f0;}
+      
+      
+      /* #section2 자식 p태그 배경색 cyan */
+      /* #section2>p{background-color: hsl(165, 84%, 45%);} */
+      /* 
+      #section2>p
+      {background-color: hsl(165, 84%, 45%);} 
+      */
+      #section2>p{background-color: #12d3a3; !important}
+
+         /* 형제선택자 
+         형+바로 밑에 동생
+         형~밑에 동생 */
+    
+
+      #section2 h1~p{background-color: #fff;}
+
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <!-- header+.container+footer -->
+    <header>
+      header
+    </header>
+    <div class="container">
+      <section id="section1">
+        section1
+      </section>
+      <section id="section2">
+        section2
+        <p>section2&gt;p&gt;p</p>
+        <div class="box">
+          section2&gt;p&gt;div.box
+          <h1>section2&gt;p&gt;div.box&gt;h1</h1>
+          <p>section2&gt;p&gt;div.box&gt;p</p>
+          <p>section2&gt;p&gt;div.box&gt;p</p>
+        </div>
+      </section>
+      <section id="section3"></section>
+      
+    </div>
+    <footer></footer>
+  </div>
+</body>
+</html>

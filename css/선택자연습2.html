@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자연습2</title>
+  <style>
+    body{font-size: 14px; /* 0.875em 87.5% 11pt*/
+    color: #f00; 
+    /* font-family: "나눔","궁서체"; */
+  
+  }
+    /* section의 제목을 진하게 크게 24px 보라색
+    section 제목 요소 선택자-> .title
+    진하게 속성 font-weight
+    24px 속성 font-size
+    보라색 속성 color */
+    .title{font-weight: bold;
+    font-size: 24px;
+  color: #eb09eb;}
+
+/* 문서내 모든 a 
+a{}
+
+문서내 모든 클래스명이 title요소 후손 중 모든 a태그
+.title a{} */
+
+
+
+/* 모든 클래스box의 글자색을 검정 글자크기 10pt->px
+줄간을 글자크기 1.4배
+선택자 모든 클래스box ->.box
+속성
+글자색을 검정 color:#000
+글자크기 10pt->px  font-size:13px
+줄간             line-height
+*/
+.box{color: #000;
+font-size: 0.929em; /* 13px*/
+margin: 1rem; /* body의 글자크기*2 */
+background-colocr: #ccc;
+line-height: 1.4em;
+}
+/* 카테고리 컬러변경 */
+#category .position .xans-record-:first-child a{
+  color: #f00;
+  font-weight: bold;
+}
+
+/* 카테고리 메뉴 중 세번째 메뉴를 배경색 반투명 빨강
+ 선택자 카테고리 메뉴중 세번째 메뉴 */
+ #category .position .xans-record-:nth-child(3) a{
+  background-color: rgba(255,0,0,0.5);
+ }
+
+
+
+  </style>
+</head>
+<body>
+  <!-- .wrap>header+.main+footer -->
+  <div class="wrap">
+    <header></header>
+    <div class="main">
+     <!-- #section$.container*2>.inner -->
+     <!-- #section$.container*2>.inner>.title+.desc -->
+     <!-- #section$.container*2>.inner>.title+.desc>.box*2 -->
+     #section$.container*2>.inner>.title+.desc>.box*2
+    </div>
+    
+    <!-- //.main -->
+
+    <!-- #section&.container*2>.inner>(title>{제목})+desc>.box*2>lorem6 -->
+    #section&<div class="container">
+      <div class="inner">
+        <title>제목</title>
+        <desc>
+          <div class="box">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="box">Aliquam sequi voluptatibus voluptatem quo optio.</div>
+        </desc>
+      </div>
+    </div>
+    <div class="container">
+      <div class="inner">
+        <title>제목</title>
+        <desc>
+          <div class="box">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="box">Atque voluptatum itaque placeat. Accusantium, veniam?</div>
+        </desc>
+      </div>
+    </div>
+    <footer></footer>
+  </div>
+  
+</body>
+</html>
