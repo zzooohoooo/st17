@@ -1,0 +1,16 @@
+/* 공통 */
+
+body{
+  font-family: "궁서체","맑은고딕";
+  font-size: 14px;
+   color: #333;  
+   -webkit-text-size-adjust: none; /* ios의 텍스트 핸드폰 방향전환시 진하게되는 현상방지 */
+   line-height: 1.4;
+}
+
+a:link,
+a:visited{color: #333; text-decoration: none;}
+a:hover{color: #f00; text-decoration: underline;}
+/* a:link{color: #333; text-decoration: none;} 
+a:visited{color: #333; text-decoration: none;}
+a:hover{color: #333; text-decoration: none;} */
