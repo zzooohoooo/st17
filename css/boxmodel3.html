@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodel3 - boxmodel 계산법</title>
+<style>*
+{margin:0; padding:0;}
+  .box{
+    /* auto(Lb) + 10(Lb) + 50(Lp)+400(width) + 50(rp) +10(rp) + auto(rm)  */
+
+    width: 400px;
+    height: 300px;
+    padding: 50px;
+    border: 10px solid #f86;
+    margin: 50px auto; /*block 가운데정렬*/
+    background-color: #333;
+    color: #fff;}
+    .box1{
+      box-sizing: content-box;
+      /* content-box 기본값 */
+    }
+
+
+
+    .box2{
+      box-sizing: border-box;
+      /* box-sizing은 박스모델 계산법을 지정 *
+      width/height 지정값이
+      박스모델 content영역지정 ->기본값 -content-box
+      박스모델 border+padding+content -> border-box width
+      선언된 값은 border+padding+content
+      /* width 선언된 값은 border+padding+comtent */
+  
+
+
+    }
+
+
+    </style>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+<!-- .box.box$*2>lorem*2 -->
+<div class="box box1">
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti similique saepe reprehenderit magni ad fugiat animi? Nemo quibusdam minima nulla mollitia ipsam, impedit, iure cum odio, molestias pariatur asperiores possimus?</div>
+  <div>Blanditiis at autem dignissimos, odit sequi tempora magnam veniam. Assumenda, pariatur eveniet excepturi alias omnis numquam commodi quos vero enim quod quia eligendi, velit libero. Earum voluptatibus rem nulla fuga!</div>
+</div>
+<div class="box box2">
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis explicabo, nobis ipsum distinctio ratione et laudantium voluptatibus animi, aspernatur eius veniam. Porro perferendis minima ducimus voluptates ex dolor expedita quidem?</div>
+  <div>Deleniti adipisci enim velit sunt debitis maiores ducimus! Cumque possimus fuga pariatur sequi explicabo iste quasi perspiciatis temporibus doloribus modi. Quis, quod praesentium. Harum nisi, esse culpa sequi iste ratione!</div>
+</div>
+</div>
+
+
+
+  
+</body>
+</html>
