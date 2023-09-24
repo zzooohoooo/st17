@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodel 2-박스계산법</title>
+  <!-- 외부의 css를 불러올때 -->
+  <link rel="stylesheet" href="asset/css/style1.css">
+  <!-- html 문서내에서 css 선언 -->
+  <style>
+
+
+.test{  
+  background-color: #6f8;
+border:1px solid#000;
+/* padding:50px;
+margin:50px; */
+padding:0 1rem;
+margin:0 2rem;
+width:300px;
+}
+</style>
+
+</head>
+<!-- 태그에 인라인으로 css적용 -->
+<body>
+  <h1 class="page-title">웹폰트 사용</h1>
+
+  <div class="box"><span class="test">Lorem ipsum dolor sit,</span> amet <span class="test">consectetur adipisicing</span> elit. Saepe minima odit veniam possimus laudantium voluptatibus excepturi provident dignissimos quis quaerat molestias dolor eius suscipit, ipsam totam, voluptate debitis esse asperiores.</div>
+  <!-- .box>lorem -->
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, asperiores recusandae. Tempore, minima labore exercitationem in nihil ullam, dolore itaque aut voluptas doloremque nobis voluptatem nemo qui ad eum voluptatum.</div>
+  <style>
+  
+h1{
+  background-color: #f68;}
+.box:nth-of-type(1){margin:50px;}
+.box:nth-of-type(2){
+  background-color:#ccc;
+  width:300px;
+  padding: 30px 50px;
+  border:1px solid #000;
+  /* margin:100px auto; */
+  /* margin:상하 auto; 블록레벨을 가운데 위치 */
+  text-align: center;
+}
+ul{
+  width:80%;
+  margin:50px auto;
+  background-color: #ccc;
+  /* block 레벨의 자식 중 인라인레벨을 정렬 */
+  text-align: center;
+}
+ul>li{background-color: #f68;
+   /* inline레벨은 크기적용 */
+   /* width:100px; */
+   /* width: 25%; */
+   width: calc(25% - 4px);
+   display: inline-block; 
+
+
+
+}
+ </style>
+<!-- ul>li*4>a>{text$} -->
+<ul>
+  <li><a href="">text1</a></li>
+  <li><a href="">text2</a></li>
+  <li><a href="">text3</a></li>
+  <li><a href="">text4</a></li>
+</ul>
+<!-- .box>lorem -->
+<div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquid quae illum, alias esse, tempore, soluta quas blanditiis qui sit atque similique aperiam ipsum quibusdam ratione. Nemo porro inventore reiciendis.</div>
+</html>

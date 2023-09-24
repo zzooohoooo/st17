@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodel</title>
+  <!-- 외부의 css를 불러올때 -->
+  <link rel="stylesheet" href="asset/css/style1.css">
+  <!-- html 문서내에서 css 선언 -->
+  <style>
+.box{
+/* border-color: #000;
+border-style: solid;
+border-width: 1px; */
+border: #000 dotted 1px;
+border-top-color: #f00;
+background-color: #ccc;
+/* 안쪽 여백 padding 
+ padding:상 우 하 좌;
+ padding:상 좌우 하;
+ padding:상하 좌우;
+ padding:상우하좌;
+
+*/
+padding:10px 20px 30px 40px;
+/* 바깥쪽 여백 margin
+ margin:상 우 하 좌;
+ margin:상 좌우 하;
+ margin:상하 좌우;
+ margin:상우하좌;
+*/
+/* margin:50px; */
+}
+/* .box 중에서 두번째 padding을 28px 50px
+선택자 두번째 .box
+속성 padding을 상우하좌 50px->padding 50px;
+ */
+.box:nth-of-type(2){
+padding:28px 50px;
+background-color: #f00;
+}
+.box:nth-of-type(3){
+padding:10px 20px 30px;
+background-color: #00f;
+
+
+}
+
+
+
+</style>
+
+</head>
+<!-- 태그에 인라인으로 css적용 -->
+<body>
+  <h1 class="page-title">웹폰트 사용</h1>
+
+  <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe minima odit veniam possimus laudantium voluptatibus excepturi provident dignissimos quis quaerat molestias dolor eius suscipit, ipsam totam, voluptate debitis esse asperiores.</div>
+  <!-- .box>lorem -->
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, asperiores recusandae. Tempore, minima labore exercitationem in nihil ullam, dolore itaque aut voluptas doloremque nobis voluptatem nemo qui ad eum voluptatum.</div>
+  <style>
+    body{color:#00f;
+    
+    }
+
+    /* block 레벨 */
+*{padding:0; margin:0;}
+/* 요소의 수평크기
+Lm+Lb+Lp+content(width)+rp+rb+rm
+요소의 수직크기
+tm+tb+tp+content(height)+bp+bb+bm */
+h1{
+  background-color: #f68;
+}
+.box:nth-of-type(1){
+  margin:50px;
+}
+.box:nth-of-type(2){
+  width:300px;
+  margin:100px auto;
+  /* margin:상하 auto; 블록레벨을 가운데 위치 */
+}
+  </style>
+</body>
+<!-- ul>li*4>a>{text$} -->
+<ul>
+  <li><a href="">text1</a></li>
+  <li><a href="">text2</a></li>
+  <li><a href="">text3</a></li>
+  <li><a href="">text4</a></li>
+</ul>
+<!-- .box>lorem -->
+<div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquid quae illum, alias esse, tempore, soluta quas blanditiis qui sit atque similique aperiam ipsum quibusdam ratione. Nemo porro inventore reiciendis.</div>
+</html>

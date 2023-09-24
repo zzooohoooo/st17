@@ -1,0 +1,37 @@
+/* @선언되는 선언부 문서앞에서 작성 */
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+  /* font-family: 'Noto Sans KR', sans-serif; */
+
+/* 공통 */
+
+body{
+  /* font-family: "궁서체","맑은고딕";
+  font-size: 14px;
+  line-height: 1.4; */
+
+
+/* 글꼴 간단표기법
+font:font-style font-variant font-weight
+font-size/line-height font-family; */
+
+  font:14px/1.4 'Noto Sans KR', sans-serif;
+   color: #333;  
+   -webkit-text-size-adjust: none; /* ios의 텍스트 핸드폰 방향전환시 진하게되는 현상방지 */
+}
+
+a:link,
+a:visited{color: #333; text-decoration: none;}
+a:hover{color: #f00; text-decoration: underline;}
+
+/* 타이포그래피 */
+.page-title{
+font-size: 2.5rem; /* body크기보다 2.5배*/
+font-weight: normal;
+
+}
+/* a:link{color: #333; text-decoration: none;} 
+a:visited{color: #333; text-decoration: none;}
+a:hover{color: #333; text-decoration: none;} */
+
+
