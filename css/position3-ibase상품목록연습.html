@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position3 ibase 상품목록 연습</title>
+  <link rel="stylesheet" href="asset/css/cafe24reset.css">
+  <style>
+    .wrap{
+      /* 최대너비 1240       상단여백 50px 좌우 auto */
+      max-width: 1240px; 
+      margin:50px auto 0;
+    }
+    .ec-base-product{}
+    .ec-base-product .prdList{
+      overflow: hidden;
+      /* float가 지정된 li를 인식하기 위해 */
+      background-color: #ccc;
+    }
+    .ec-base-product .prdList::after{
+      content: '';
+      display:block;
+      clear: both;
+    }
+    .ec-base-product .grid2 > li{ width:50%;}
+    .ec-base-product .grid3 > li{ width:33.3333%;}
+    .ec-base-product .grid4 > li{ width:25%;}
+    .ec-base-product .grid5 > li{ width:20%;}
+
+    .ec-base-product .prdList >li{
+      /* display: inline-block; */
+      /* float가 선언되면 일반흐름에서 제외 */
+      float:left;
+      background-color: #f68;
+      box-sizing: border-box;
+      /* 배경색이 적용되는  여백 양쪽 10px  */
+      padding:0 10px;
+    }
+
+    /*
+    *position연습 시작
+    */
+    .ec-base-product .prdList  .thumbnail{
+      /* .ec-base-product .prdList >li .icon__box의 기준조상 */
+      position: relative;
+    }
+  
+    .ec-base-product .prdList >li .icon__box{
+      /* 일반흐름제외, 기준요소 설정 */
+      position: absolute;
+      /* 위치설정  */
+      right: 0px; top:0px;
+    }
+
+    /*
+    *position연습 끝
+    */
+
+    .ec-base-product .prdList >li .icon__box >span{
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .ec-base-product>.mainTitle+ul.prdList.grid4-->
+    <div class="ec-base-product">
+      <div class="mainTitle"></div>
+      <ul class="prdList grid4">
+          <!-- li.xans-record-*2>.thumbnail>a>img^div.icon__box>span*2>img^^span.benfit -->
+          <!-- li.xans-record- -->
+          <li class="xans-record-">
+            <!-- .thumbnail+.description -->
+            <div class="thumbnail">
+              <!-- a>img^div.icon__box>span*2>img^^span.benfit -->
+              <a href=""><img src="asset/img/main.jpg" alt=""></a>
+              <div class="icon__box">
+                <span class="cart"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                <span class="wish"><img src="asset/img/btn_wish_before.png" alt=""></span>
+              </div>
+              <span class="benfit"></span>
+            </div>
+            <div class="description"></div>
+          </li>
+          <li class="xans-record-">
+            <!-- .thumbnail+.description -->
+            <div class="thumbnail">
+              <!-- a>img^div.icon__box>span*2>img^^span.benfit -->
+              <a href=""><img src="asset/img/main.jpg" alt=""></a>
+              <div class="icon__box">
+                <span class="cart"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                <span class="wish"><img src="asset/img/btn_wish_before.png" alt=""></span>
+              </div>
+              <span class="benfit"></span>
+            </div>
+            <div class="description"></div>
+          </li>
+          <li class="xans-record-">
+            <!-- .thumbnail+.description -->
+            <div class="thumbnail">
+              <!-- a>img^div.icon__box>span*2>img^^span.benfit -->
+              <a href=""><img src="asset/img/main.jpg" alt=""></a>
+              <a href=""><img src="" alt=""></a>
+              <div class="icon__box">
+                <span class="cart"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                <span class="wish"><img src="asset/img/btn_wish_before.png" alt=""></span>
+              </div>
+              <span class="benfit"></span>
+            </div>
+            <div class="description"></div>
+          </li>
+          <li class="xans-record-">
+            <!-- .thumbnail+.description -->
+            <div class="thumbnail">
+              <!-- a>img^div.icon__box>span*2>img^^span.benfit -->
+              <a href=""><img src="asset/img/main.jpg" alt=""></a>
+              <a href=""><img src="" alt=""></a>
+              <div class="icon__box">
+                <span class="cart"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                <span class="wish"><img src="asset/img/btn_wish_before.png" alt=""></span>
+              </div>
+              <span class="benfit"></span>
+            </div>
+            <div class="description"></div>
+          </li>
+       
+
+          
+        
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

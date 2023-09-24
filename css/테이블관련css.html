@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블관련css</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .container{margin:50px;}
+    table, tr,td,th{
+      box-sizing: border-box;/}
+    table.sample{
+      border-collapse: collapse;
+      /*테이블과 셀에 너비를 지정할 때  table-layout: fixed*/
+      table-layout: fixed;
+
+      width:100%;
+      border:1px solid #000;
+      border-top:10px solid #f86;
+    }
+
+    .sample tr:nth-child(1) th {
+       background-color: #000;
+       color:#fff;
+       padding:1rem;
+    }
+    .sample tr:nth-child(1) td{vertical-align: middle;}
+    .sample tr:nth-child(2) td{vertical-align: top;}
+    .sample tr:nth-child(3) td{vertical-align: middle;}
+    .sample tr:nth-child(4) td{vertical-align: bottom;}
+
+    /* 짝수번째줄 */
+    .sample tr:nth-child(even) td{
+      background-color: #efefef;
+    }
+    /*홀수번째 줄*/
+    .sample tr:nth-child(odd) td{
+      background-color: #fff;
+    }
+    .sample tr:hover td{
+      background-color: #68f;
+    }
+    .sample th,
+    .sample td{
+      padding: 1em; 
+      border:1px solid #000;
+    }
+    .sample th:nth-child(1){
+      width:13em;
+    }
+    .sample th:nth-child(3){
+      width:150px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table class="sample">
+      <!-- emmet ^  사용 -->
+      <!-- tr>th*3>{title$}^tr -->
+      <!-- tr>th*3>{title$}^^tr -->
+      <!-- tr>th*3>{title$}^^tr*3>td*3>lorem2 -->
+      <tr>
+        <th>title1</th>
+        <th>title2</th>
+        <th>title3</th>
+      </tr>
+      <!-- 둘째 tr -->
+      <tr>
+        <td>가나다 라마바 아자차</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis odit sapiente quidem et, repellat consequuntur quae necessitatibus doloribus dolor quam explicabo, vel sed? In ipsum excepturi nobis hic consectetur praesentium.
+        Suscipit repellat exercitationem facilis ratione debitis asperiores minima autem laboriosam ipsa cumque ad itaque quas quia molestias alias amet impedit vitae fugit iure, aliquam nobis odit dignissimos numquam? Aperiam, illo?</td>
+        <td>Nihil, mollitia?</td>
+      </tr>
+      <!-- 셋째 tr -->
+      <tr>
+        <td>abc def ghi</td>
+        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores fugit at non quam voluptatum quo ad quasi aspernatur molestias inventore vero necessitatibus, impedit iste quibusdam ab excepturi placeat explicabo earum?
+        Repellendus consequuntur, quod ducimus nam natus modi, mollitia, rerum illum totam culpa excepturi tenetur quidem odio corrupti commodi omnis dolor explicabo praesentium! Esse, aliquam modi amet voluptas ipsa possimus consequatur.</td>
+        <td>Amet, similique!</td>
+      </tr>
+      <!-- 넷째 tr -->
+      <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum excepturi libero possimus odit, ipsa dolore sed magnam quidem! Quaerat porro facilis officia est fuga at laboriosam alias amet totam.
+        Consectetur, ipsa mollitia nisi, illo voluptas dicta eligendi reiciendis eaque ad, culpa fuga nulla aspernatur. Veniam voluptate reprehenderit, nihil error dolores perferendis nobis assumenda, commodi eveniet laudantium sapiente laboriosam optio.</td>
+        <td>Repudiandae, nihil!</td>
+      </tr>
+      
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경4 단축표기법 background-size</title>
+</head>
+<body>
+  <!-- .wrap>.box.box$*2 -->
+  <div class="wrap">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+  </div>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{ 
+      width:90%; margin:0 auto;
+    }
+    .box{
+      min-height: 300px;
+      background-color: #ccc;
+      margin-bottom:20px;
+    }
+    .box1{
+      background:#ccc url(images/bg.jpg) no-repeat center bottom;
+      background-size: cover;
+    }
+    
+
+    .box2{
+      background:url(images/flower.png) repeat-x left bottom;
+      /* background-size: 100px; */
+      background-size: auto 20px;
+    }
+  </style>
+</body>
+</html>

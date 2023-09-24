@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 </title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="section section1">
+      <p class="section-title">section title1</p>
+    </div>
+    <div class="section section2">
+      <p class="section-title">section title2</p>
+    </div>
+    <div class="section section3">
+      <p class="section-title">section title3</p>
+    </div>
+    <div class="section section4">
+      <p class="section-title">section title4</p>
+    </div>
+  </div>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      /* width:1400px; */
+      margin:0 auto;}
+    .section{
+      width:100%;
+      min-height:500px ;
+      background-color: #ccc;
+      /* margin-bottom:10px; */}
+    /* section1의 배경색을 #f68 */
+    .section1{
+      background-color: #f68;
+      background-image: url(sun.png);}
+    .section2{
+      background-color: #8f6;
+      background-image: url(images/flower.png);
+      background-repeat: repeat-x;
+      background-position: left bottom;}
+    .section3{
+      background-color: #68f;
+      background-image: url(img1.png);
+      /* background-position: 0 0; */
+      background-position: left top;}
+    .section4{
+      background-color: #46f ;   
+      background-image: url(images/bg.jpg);
+      background-position: center bottom;}
+
+    .section .section-title{
+      box-sizing: border-box;
+      width:90%;
+      padding:2rem 1rem;
+      margin:0 auto;
+      background-color: #ccc;}
+
+  </style>
+</body>
+</html>
