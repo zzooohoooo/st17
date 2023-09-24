@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모서리둥글게 border-radius</title>
+</head>
+<body>
+  <h1>border-radius</h1>
+  <!-- .wrap>.box.box$*6>{box$} -->
+  <div class="wrap">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+    <div class="box box6">box6</div>
+  </div>
+  
+  <style>
+    *{margin:0; padding:0;}
+    .wrap{
+      width:90%;
+      min-width:1000px;
+      max-width:1400px;
+
+      margin:0 auto;
+      /* padding:50px; */
+      /* background-color: #ccc; */
+    }
+    .box{
+      background-color: #333;
+      width:300px;
+      height: 100px;
+      margin:30px 50px;
+    }
+    /* 
+    border-radius : 상 우 하 좌 ;
+    왼쪽위가 0,0(시작점)
+    */
+    .box1{border-radius: 10px 20px 30px 40px;}
+    .box2{border-radius: 10px 50px;}
+    .box3{border-radius: 50px;}
+    .box4{border-radius: 50%;}
+    .box5{
+      width:100px;
+      border-radius: 50%;
+    }
+    .box6{
+      width:100px;
+      /* border-radius: 0 50px 0 0; */
+      border-radius: 50px 50px 50px 0;
+    }
+  </style>
+</body>
+</html>

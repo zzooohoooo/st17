@@ -1,0 +1,82 @@
+/* 나눔 고딕 웹폰트선언-구글폰트 import */
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR&display=swap');
+  /* font-family: 'Nanum Gothic', sans-serif; */
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR&display=swap');
+  /* font-family: 'Dancing Script', cursive; */
+
+
+  /* reset */
+  *{margin: 0; padding: 0;}
+
+  /* 공통 */
+  /* body에
+  서체 나눔고딕지정
+  글자크기 11pt -> em으로 지정
+  줄간격 1.2
+  글자색 #333
+  그리고 ios에서 핸드폰 방향 전환했을때 글자 진하게 되지 말게 설정 */
+
+  body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 0.938em; /*11pt*/
+    line-height: 1.2;
+    color: #333;
+    -webkit-text-size-adjust: none;
+  }
+
+  /* 레이아웃 */
+  /* 
+  header를 부모의 너비를 다쓰고
+  최소높이가 50px 되고 아니면 자식의 높이를 따른다
+  안쪽여백 2글자 들어가게
+  배경색은 회색
+  */
+  header{
+    /* width:auto; */
+    min-height: 50px;
+    padding: 2rem; /* 부모에게 padding 지정*/
+    background-color: #ccc;
+  }
+
+  /* 
+  h1은 너비를 1440을 가지고
+  부모영역에서 가운데 
+  */
+  .page-title{
+    height: 130px;
+    width: 90%;
+    max-width:1400px;
+    /* margin:0 auto; */
+    margin:50px auto;
+    /* margin:50px auto; 부모가 border padding text가 없을경우는 margin x */
+    background-color: #f00;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .container{}
+
+section{
+  background-color: #efefef;
+  margin-top: 50px;
+  /* min-height: 100px; */
+  height: 100px;
+  /* width: 50vw; */
+  width: 300px;
+  margin:50px auto;
+}
+
+#section1{overflow: auto}
+#section2{overflow: hidden;}
+/* #section3{overflow: scroll;} */
+#section3{overflow: auto;}
+
+
+
+
+
+
+
+
