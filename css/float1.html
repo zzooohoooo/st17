@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float1</title>
+</head>
+<body>
+  <div class="container">
+    <div class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi aliquid nemo, obcaecati eos omnis illum rerum autem beatae repudiandae eligendi dolore eum veritatis unde, alias porro animi? Commodi, est.
+      Modi eligendi officiis consequatur totam repellat qui quaerat omnis asperiores, et ducimus nisi sapiente maxime maiores, velit molestias laborum quae ipsum. Neque nihil accusantium harum temporibus omnis repellendus voluptas quis!
+    </div>
+    <!-- img를 블록레벨로 감싸면 작업이 편해집니다 -->
+    <div class="img-wrap"><img src="background/images/img1.png" alt="float연습"></div>
+    <!-- .text>lorem*2 -->
+    <div class="text text2">
+      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius maxime fugiat officiis earum quasi voluptas unde excepturi minus. Voluptates eveniet quis quos veritatis sit quod ex ad nobis neque laudantium.</div>
+      <div>Ab vero quidem odio. Labore possimus natus voluptatem magnam aliquam. Aliquam ipsam animi nihil tenetur at fugit, corporis natus doloribus, recusandae repellendus ut, rem architecto temporibus provident accusamus magnam saepe!</div>
+    </div>
+  </div>
+  <style>
+    /* 
+      너비는 부모에게 지정
+      높이는 자식이 결정
+    */
+
+    .text{}
+
+    /* img의 부모 */
+    /* 
+      div
+        └ img
+      img를 블록레벨의 자식이 되게 해주세요
+      img가 부모의 크기를 따르게 하는 방법
+      1. 부모에게 너비를 지정
+      2-1. img에게 width:100%;  
+          (부모의 너비를 따른다)
+      2-2  img에게 max-width:100%; 
+           (이미지 원크기보다 커지지 말아라)
+    */
+    .img-wrap{
+      float:left; 
+      /*
+      부모나 형제의 왼쪽으로 흘러가요
+      float 값이 설정된 요소의 이후 요소는 float에 영향
+      */
+      width:50%;
+      max-width:400px;
+      border: 1px solid #f00;
+      background-color: #ccc;
+    }
+    .img-wrap img{
+      border: 1px solid #000;
+      max-width:100%;
+      /* width:100%; */
+      /* float:left; */
+    }
+
+    .text2{
+      clear:left;
+    }
+  </style>
+</body>
+</html>

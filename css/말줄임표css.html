@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>말줄임표 관련 css</title>
+  <style>
+    .sample{
+      width: 400px;
+      margin:100px auto;
+      box-sizing: border-box;
+      border: 1px solid #000;
+    }
+
+    .box{padding:30px;background-color: #ccc;}
+
+    .box p{
+      /* 말줄임 관련 */
+      /* white-space: normal; */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      /* height: 150px; */
+      background-color: #f68;
+      margin-bottom:50px;
+    }
+
+    .sample:nth-of-type(2) .box p{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- .sample*2>.box>p*2>lorem*2 -->
+  <div class="sample">
+    <div class="box">
+      <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus itaque cum perferendis quam nam incidunt natus eius eum consectetur! Optio voluptas reprehenderit error? Esse eligendi iste eum fuga officia nemo.</span><span>Ab perspiciatis modi placeat quae deserunt hic. Quasi, ex? Amet laborum sint quia ab consequuntur at? Obcaecati in fuga accusamus rerum velit asperiores nisi reiciendis repellat, vero at quo nulla!</span></p>
+      <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, magnam cupiditate vero placeat suscipit dolore distinctio eius, nostrum, dicta reiciendis omnis quos. Voluptatem et culpa vel voluptatibus itaque, rerum hic?</span><span>Cumque corporis repellendus expedita eveniet eum porro animi quae hic at id, odio maiores ut repudiandae maxime sunt rerum ratione dolores eaque exercitationem in laboriosam sed sequi iure dolorem. Quae.</span></p>
+    </div>
+  </div>
+  <div class="sample">
+    <div class="box">
+      <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam pariatur deserunt sint laboriosam, ipsa repellendus doloremque, nesciunt ad accusantium commodi numquam exercitationem dignissimos architecto quibusdam cum voluptates praesentium eaque.</span><span>Consequatur, fugiat quisquam laborum, aut ullam accusamus dolore dolor molestiae autem odio saepe adipisci. Rem ab consequuntur laudantium quibusdam non quia. Eius dicta accusantium autem cum quisquam mollitia cumque fugiat.</span></p>
+      <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut quas quaerat, veritatis debitis ipsa aliquam sed accusamus sint error, ab eum ratione. Error modi beatae ut quia rem molestiae fugiat?</span><span>Ullam totam consectetur hic. Similique a delectus cupiditate voluptatibus ipsam saepe qui deserunt labore nisi. Sunt necessitatibus, quasi incidunt molestiae vitae numquam corrupti voluptatem pariatur nihil reiciendis fugiat officiis maiores?</span></p>
+    </div>
+  </div>
+  
+  <!-- .sample2>.content-wrap>p -->
+  <div class="sample2">
+    <div class="content-wrap">
+      <p>
+        모든 국민은 능력에 따라 균등하게 교육을 받을 권리를 가진다. 국회의원은 그 지위를 남용하여 국가·공공단체 또는 기업체와의 계약이나 그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할 수 없다. 대통령이 궐위되거나 사고로 인하여 직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그 권한을 대행한다.
+      </p>
+      <!-- p>lorem22 -->
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo asperiores voluptate voluptas architecto deserunt modi, magni incidunt quos ullam perspiciatis dolores praesentium.</p>
+    </div>
+  </div>
+  
+  <style>
+    .sample2{
+      width:80%;
+      margin:auto;
+    }
+
+    .sample2 p{
+      text-align: center;
+      word-break: keep-all; /*한글의 단어단위로 줄바꿈*/
+    }
+  </style>
+</body>
+</html>

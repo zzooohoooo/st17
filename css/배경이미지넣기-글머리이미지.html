@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경이미지넣기-글머리이미지</title>
+</head>
+<body>
+  <!-- .container -->
+  <div class="container">
+    <!-- .box*3.box$>{text$} -->
+    <div class="box box1">text1</div>
+    <div class="box box2">text2</div>
+    <div class="box box3">text3</div>
+    <div class="box box4">text4</div><!--추가-->
+  </div>
+  <style>
+    body{height: 10000px;}
+    *{margin:0; padding: 0;}
+    .container{
+      margin:50px;
+      padding: 50px;
+      border: 1px solid #000;
+    }
+    .box{
+      padding:10px 70px;
+      border: 10px dotted red;
+      background-color: #ccc;
+      margin-bottom:50px;
+    }
+    .box:last-child{
+      margin-bottom: 0;
+    }
+    .box1{
+      background-image: url(background/images/img1.png);
+      background-size: 70px;
+      background-repeat: no-repeat;
+      background-position: -20px -20px;
+
+
+      min-height: 300px;
+    }
+
+    .box2{
+      /* background-image: url(background/images/sprite.png); */
+      background-repeat: no-repeat;
+      
+      padding-left:0; /*.box {padding:20px 70px}의 왼쪽패딩 무효화*/
+      min-height: 300px;
+
+    }
+    .box2:before{
+      /* content:'box2앞'; */
+      content:'';
+      /*block 처리하려면 content속성 있어야해요*/
+      width:90px;
+      height:105px;
+      display: block;
+      margin:0 auto;
+
+      /* background-image: url(background/images/sprite.png);
+      background-repeat: no-repeat;
+      background-position: 0 -955px;
+      background-color:transparent; */
+      background:transparent  url(background/images/sprite.png) no-repeat 0 -955px;
+      
+
+    }
+    .box2:after{
+      content:'box2뒤'
+    }
+
+    .box3{
+
+      background-image: url(background/images/face_FILL0_wght400_GRAD0_opsz24.png);
+      background-repeat: no-repeat;
+      background-position: 4px 18px;
+      background-origin: padding-box;
+      background-clip: border-box;
+
+      line-height: 60px;
+      padding:0;/*패딩없는 상태로*/
+      padding-left:33px;
+      /* padding:20px inherit; */
+      /* min-height: 60px; */
+    }
+
+    .box4{
+      /* 글자앞에 여백을 1글자  */
+      padding-left: 1em;
+      /* 배경이미지 반복없이 face 아이콘 넣기 */
+      background-image: url(background/images/face_FILL0_wght400_GRAD0_opsz24.png);
+      background-repeat: no-repeat;
+      /* 배경이미지를 .box4요소의 오른쪽 끝 맨위 10px */
+      background-position: right 10px;
+    }
+  </style>
+</body>
+</html>

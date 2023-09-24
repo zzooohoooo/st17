@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록관련 css</title>
+</head>
+<body>
+  <!-- .wrap>ul>li*4>a>{메뉴$} -->
+  <div class="wrap">
+    <ul>
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+    </ul>
+    <ol>
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+    </ol>
+  </div>
+  <style>
+    .wrap{
+      width:300px;
+      box-sizing: border-box;  margin:auto; border: 1px solid #000;
+    }
+
+    ul, ol{
+      box-sizing: border-box;
+      border: 1px solid #000;
+      background-color: #ccc;}
+
+    li{background-color: #f68;}
+    ul li{list-style-type: square;}
+    ol li{list-style-type:lower-roman;}
+
+    ul li,  ol li {list-style:  none; /*글머리기호를 사용x*/}
+  </style>
+</body>
+</html>

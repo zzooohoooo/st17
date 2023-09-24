@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform2-수직 수평 가운데정렬</title>
+  <style>
+    *{margin:0; padding:0;}
+    .wrap{
+     /* 브라우저의 너비와 높이를 다 써라 */
+     width:100vw;
+     height: 100vh;
+     background-color: #ccc;
+
+     /* .center-box의 기준조상 */
+     position: relative;
+    }
+    .center-box{
+      /* 
+      일반흐름에서 제외 ->부모의 너비를 가져오지 못해요
+      기준조상 지정
+      위치조정 : left/right/top/bottom
+      */
+     position: absolute;
+     left:50%;
+     top:50%;
+     /* 위치를 변경해라
+       자신의 너비의 50% x축 왼쪽으로
+       자신의 높이의 50% y축 위로  
+     */
+     transform: translate(-50%,-50%);
+     padding:1em 2em; 
+     background-color: #68f;
+      font-size:25px;
+    }
+    .center-box .inner{
+      font-size:30px;
+      text-align: center;
+      padding:50px;
+      background-color: #f86;
+    }
+    .center-box .inner p{
+      margin-bottom:0.5em;
+    }
+    .center-box .inner p:first-child{
+      font-size:1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+   <div class="wrap">
+    <div class="center-box">
+      <div class="inner">
+        <p>Section Title</p>
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+    </div>
+   </div>
+</body>
+</html>

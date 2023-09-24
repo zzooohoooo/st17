@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경3-다중 배경</title>
+</head>
+<body>
+  <div class="wrap"></div>
+  <div class="content">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias amet perspiciatis voluptatum placeat sint. Quidem magnam, omnis similique tempora voluptates, sapiente vel impedit quia cumque laborum a iste officiis. Animi!</div>
+    <div>Blanditiis maiores eveniet explicabo, omnis itaque illum sint soluta libero id, consequatur quasi nulla iste tempora assumenda modi sequi dignissimos laudantium error veniam ad veritatis. Voluptate iure delectus sapiente quidem.</div>
+  </div>
+
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      /* width:100vw; */
+      width:100%;
+      height: 100vh;
+      background-color: #f86;
+      background-image: 
+         url(images/sun.png)
+         url(images/flower.png),
+         url(images/field2.png);
+      background-repeat: 
+         no-repeat,
+         repeat-x,
+         repeat-x;
+      /* background-position: right top; */
+      background-position: 
+        100% 0,
+        0 100%,
+        center bottom;
+    }
+  </style>
+  
+</body>
+</html>

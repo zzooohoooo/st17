@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- font-family: 'Raleway', sans-serif; -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+<!-- font-family: 'Noto Sans KR', sans-serif; -->
+  <title>float3-2단레이아웃</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body,
+    div,
+    span,
+    h1{
+      margin:0; padding:0;
+    }
+
+    /* 
+    서체 영문 raleway, 한글 noto sans kr 적용/글자크기 14px/글자색 검정/줄간격 1.4
+ */
+   body{
+    /* 
+    font-family: 'Raleway','Noto Sans KR',sans-serif;
+    font-size: 14px;
+    color:#000;
+    line-height: 1.4; */
+    font:14px/1.4 'Raleway','Noto Sans KR',sans-serif;
+    color:#000;
+   }
+   .banner-wrap{
+    /* 부모의 콘텐츠 영역을 다 사용 */
+    width:100%;
+    /* background-color: #ccc; */
+    /*테스트용*/
+    /* border: 1px solid #000; */
+    /*테스트용*/
+   }
+   .banner-wrap .left{
+    width:60%;
+    /* background-color: #f68; */
+    /* 높이는 배경이미지의 크기를 고려해서 지정 */
+    height: 500px;
+    /* main-banner01.jpg을 배경이미지로 지정 */
+    background-image: url(asset/img/main-banner01.jpg);
+    background-repeat: no-repeat;
+    /* 수평오른쪽끝 수직 가운데 위치 */
+    background-position: 100% center;
+    /* 배경이미지의 크기를 요소의 크기에 맞게 조정 */
+    background-size: cover;
+    /* 배경이미지의 오른쪽이 둥글게 표시 */
+    border-radius: 0 250px 250px 0;
+   }
+
+   .banner-wrap .right{
+     width:40%;
+     padding-left:100px;
+     /* background-color: #86f; */
+     /*테스트용*/
+
+   }
+
+   /* 
+   right의 span 블록레벨 전환->줄바꿈
+   */
+   /* .banner-wrap .right > span{ */
+    .banner-wrap .right .text{
+    display: block;
+   }
+   .banner-wrap .right .text1{
+    margin-top:110px;
+    font-size: 18px;
+    /* 자간넓게 */
+    letter-spacing: 2px;
+  }
+   
+   .banner-wrap .right .text2{
+     font-size: 100px;
+     /* 30%는 진하게 두껍게 */
+     font-weight: 700;
+    }
+
+    /* 30과 %사이 여백주기 위해 span추가 */
+    .banner-wrap .right .text2 span{ 
+      /* 자간을 좁게 */
+      letter-spacing:-6px;
+      padding-right: 20px;
+      /* display: inline; 줄바꿈없이 크기지정변경*/
+    }
+    /* text3 버튼 만들기 */
+   .banner-wrap .right .text3{
+    /* 포함하는 내용의 크기만큼이 요소의 크기가 되게 */
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid #000;
+    margin-top:40px;
+  }
+
+   .banner-wrap .right .text3 a{
+    /* 부모의 너비를 쓰게 하기 위해 */
+     display: block;
+     /* 여백을 a태그 주고 여백에서 손가락모양이되게 */
+     padding:10px 20px;
+     text-decoration: none;
+     color:#000;
+     background-color: #fff;
+    }
+    /* 버튼에 마우스를 오버하면 배경색과 글자색 변경 */
+    .banner-wrap .right .text3 a:hover{
+      background-color: #000;
+      color:#fff
+    }
+  
+
+   /* 단처리 css */
+   /* 단으로 사용할 요소가 float */
+   .banner-wrap .left{float:left;   }
+   .banner-wrap .right{float:left;   }
+
+   /* float지정 즉 단요소의 부모가 단요소(자식요소)를 인식하게 
+     부모에게 overflow:hidden;
+   */
+   .banner-wrap {
+    overflow: hidden;
+   }
+   
+   /* 
+     float지정 한 요소의 뒤에 작성된 요소들에게 float에 영향을 받지 않게 설정
+   */
+   .banner-wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+   }
+
+  </style>
+</head>
+<body>
+  <h1>float 연습</h1>
+  <div class="sample">
+    가나다라 마바사아 자차카타 파하  가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하
+  </div>
+  <div class="banner-wrap">
+    <!-- .left+.right -->
+    <div class="left"></div>
+    <div class="right">
+      <!-- span.text.text$*3 -->
+      <span class="text text1">Runway items season off</span>
+      <span class="text text2"><span>30</span>%</span>
+      <span class="text text3">
+        <a href="">Shop Now</a>
+      </span>
+
+    </div>
+  </div>
+</body>
+</html>
