@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox 선언</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    /* 테스트용 화면 */
+    .parent{
+      background-color: #ccc;
+      min-height: 100px;
+      margin-top:50px;
+    }
+    .child{
+      background-color: dodgerblue;
+      border: 1px solid #000;
+    }
+
+    /* flex속성 */
+    .container{
+      display: flex;
+    }
+
+    .container.column{
+      flex-direction: column;
+    }
+
+    .child{
+      /* flex:none;  아래와 동일*/
+      /* flex item 크기고정 */
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+
+      width:25%;
+      height: 200px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- div.parent.container>.child.item*4>{item$} -->
+    <div class="parent container column">
+      <div class="child item">item1</div>
+      <div class="child item">item2</div>
+      <div class="child item">item3</div>
+      <div class="child item">item4</div>
+    </div>
+    <div class="parent container row">
+      <div class="child item">item1</div>
+      <div class="child item">item2</div>
+      <div class="child item">item3</div>
+      <div class="child item">item4</div>
+    </div>
+  </div>
+</body>
+</html>

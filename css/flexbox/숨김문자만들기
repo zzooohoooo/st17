@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숨김문자만들기</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    .wrap{margin-top:50px;}
+    .parent{
+      width:100px; height: 40px;
+      background-image: url(../naver/asset/image/header_logo.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: #ccc;
+    }
+    .blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="parent"><span class="blind">숨김문자</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 6번스타일</title>
+  <style>
+    *{margin:0; padding: 0; box-sizing: border-box;}
+    .wrap{
+      margin-top:50px;
+    }
+    header{
+      background-color: dodgerblue;
+    }
+    .inner{
+      max-width: 700px;
+      margin:0 auto;
+      background-color: #ccc;
+      position: relative;
+    }
+    .inner>div{
+      background-color: rgba(0,255,255,0.5);
+      border: 1px solid #000;
+    }
+
+    .logo{width:200px; height: 80px;}
+    .gnb{
+      min-width: 400px;
+      max-width: 500px;
+    }
+
+    /* 플렉스속성 */
+    .flex-container{
+      display: flex;
+      /* 기본값 flex-direction: row; */
+      flex-direction: column;
+      /*주축 수직방향 교차축 수평  */
+      /* justify-content: flex-start; */
+      align-items: center;
+    }
+    .flex-container>div{
+      /* flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto; */
+    }
+    .flex-container .top-menu{
+      position: absolute;
+      right: 0; 
+      /* bottom:0; */
+      top:0px;
+    }
+  </style>
+</head>
+<body>
+  <h1>flex item의 수직방향 flex-direction:column</h1>
+  <div class="wrap">
+    <header>
+      <div class="inner flex-container">
+        <div class="logo">logo</div>
+        <div class="gnb">글로벌네비게이션바</div>
+        <div class="top-menu">유틸메뉴들</div>
+      </div>
+    </header>
+  </div>
+</body>
+</html>

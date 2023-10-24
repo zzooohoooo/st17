@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유튜브동영상 비율 유지하기</title>
+   <style>
+    *{margin:0; padding: 0;}
+    .wrap{margin:50px; background-color: #ccc;}
+    /* .media-box>.media-wrap>iframe */
+    .media-box{
+      box-sizing: border-box;
+      /* 크기를 지정 */
+      max-width: 800px;
+    }
+    .media-box .media-wrap{
+      box-sizing: border-box;
+      /* 동영상 가로세로 비율설정 */
+      width:100%;
+      padding-top:56.25%;
+      position: relative;
+      /* 동영상의 4:3 비율의 크기를 만들기
+      padding-top:75%; */
+      /* 동영상의 16:9 비율의 크기를 만들기 */
+
+
+      background-color: #f00;
+    }
+    
+    /* .media-box .media-wrap iframe{ */
+    .media-box .media-wrap .media{
+      box-sizing: border-box;
+      /* 부모의 가로세로크기를 따른다 */
+      position: absolute;
+      left:0; top:0;
+      width:100%; height: 100%;
+
+      background-color: #00f;
+    }
+   </style>
+</head>
+<body>
+   <div class="wrap">
+    <!-- .media-box>.media-wrap -->
+    <div class="media-box">
+      <div class="media-wrap">
+        <iframe 
+        class="media"
+        src="https://www.youtube.com/embed/wfqroXqcoeo?si=pG3JMBI6-h6TK-62" title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- <span class="media">테스트용텍스트</span> -->
+      </div>
+    </div>
+
+   </div>
+</body>
+</html>

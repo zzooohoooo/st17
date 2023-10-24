@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox 양끝정렬 flex3번스타일</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .wrap{
+      margin-top:100px;
+      background-color: #ccc;
+    }
+    /* 레이아웃 */
+    header{
+      /* width:100%; */
+      background-color: #999;
+    }
+    header .inner{
+      width:90%;
+      max-width: 1400px;
+      margin-left:auto;
+      margin-right:auto; 
+      background-color: rgba(255,0,0,0.5);
+      border: 1px solid #f00;
+    }
+    .logo{width:100px; height: 100px;}
+    .gnb{}
+    .util{font-size: 12px;}
+    .item{
+      background-color: rgba(0,0,255,0.5);
+      border: 1px solid #000;
+    }
+
+    /* flexbox 설정 */
+    .parent{
+      display: flex;
+      flex-direction: row;/*진행수평방향*/
+      justify-content: space-between;/*주축 양끝정렬*/
+      align-items: center;/*교차축정렬*/
+    }
+    .item{
+      /* 플렉스아이템의 고유크기 고정 */
+      flex:none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header>.inner>.logo.item+.gnb.item+.util.item -->
+    <header>
+      <div class="inner parent">
+        <div class="logo item">로고</div>
+        <div class="gnb item">카테고리(글로벌네비게이션바) 카테고리(글로벌네비게이션바)</div>
+        <div class="util item">상단유틸메뉴</div>
+      </div>
+    </header>
+  </div>
+</body>
+</html>

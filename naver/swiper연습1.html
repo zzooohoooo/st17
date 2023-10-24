@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper 연습1</title>
+  <!-- 1. swiper 플러그인 설치 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- 2. swiper 관련 css 설치 -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<!-- css 순서가 의미 내가 작성한 css 파일 위에 설치 -->
+  <!-- <link rel="stylesheet" href="내 css"> -->
+  <style>
+    .swiper{
+      width:600px;
+      height: 400px;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- 3 swiper 구조에 맞게 html 작성 -->
+  <div class="swiper myswiper-top">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+<script>
+  // 4. swiper플러그인을 내 요소에 연결
+  // swiper에 연결할 요소에 유일한 클래스명을 주세요
+  // .myswiper-top 자리에 연결할 요소의 클래스명
+  const swiper = new Swiper('.myswiper-top', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+</body>
+</html>

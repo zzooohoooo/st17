@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형웹1</title>
+  <style>
+    body{background-color: #ccc;}
+    h1{
+      background-color: #f00; 
+      color:#fff;
+      font-size:2rem;
+    }
+    p{
+      margin-top:50px;
+      background-color: #f00;
+      color:#fff
+    }
+    @media screen and (max-width:1024px){
+      body{background-color: dodgerblue}
+      h1{
+      background-color: #efefef; 
+      color:#000;
+      }
+      p{
+        background-color: #efefef; 
+        color:#000;
+      }
+    }
+    @media screen and (max-width:768px){
+      body{background-color: #fff}
+      h1{
+        font-size:1rem;
+      }
+      p{
+        margin-top:0px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Lorem, ipsum.</h1>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio similique explicabo, sunt consectetur recusandae necessitatibus officia velit nobis delectus in deleniti? Illo suscipit explicabo voluptates nihil fuga et placeat autem.
+  </p>
+</body>
+</html>

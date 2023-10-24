@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>푸터하단에 놓기</title>
+  <style>
+    *{margin:0; padding: 0; box-sizing: border-box;}
+    html,body{
+      /* 문서의 내용이 적어서 높아가 작아도 최소 브라우저의 높이를 차지 */
+      height: 100%;
+    }
+
+    body{
+      background-color: #c00;
+    }
+
+    .wrap{
+      position: relative;
+      padding:50px;
+      background-color: #c6f;
+      /* 최소높이를 브라우저의 높이로 지정 */
+      min-height: 100%;
+    }
+    .wrap .test{
+      /* 내용의 역할 */
+      background-color: #ccc;
+      height: 300px;
+      position: relative;
+    }
+    .wrap .test .test-inner{
+      position: absolute;
+      left:0; bottom:0; width:100%; padding:30px;
+      background-color: #6fc;
+    }
+    
+    .wrap footer{
+      position: absolute;
+      left:0; bottom:0;
+      background-color: #fc6;
+      padding: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="wrap">
+    <div class="test">가나다라마사아자
+
+      <div class="test-inner">
+        테스트의 바닥역할을 할요소
+      </div>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        가나다라마사아자
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

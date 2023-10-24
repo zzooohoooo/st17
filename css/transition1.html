@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition1 요소밑에 밑줄 만들기</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .sample{
+      margin:50px;
+      background-color: #ccc;
+    }
+
+    /*reset*/
+    li{list-style: none;}
+    a:link,
+    a:visited,
+    a:hover{
+      text-decoration: none;
+      color:#000;
+    }
+
+    /*테스트용*/
+    /* .box>ul>li>a>{menu1} */
+    .box{}
+    .box ul{}
+    .box ul li{
+      /* background-color: #f00; */
+    }
+    .box ul li a{
+      background-color: rgba(0,0,255,0.2);
+      padding:0.5em 1.5em;
+      display: inline-block;
+    }
+
+    /* 메뉴밑에 밑줄그리기 */
+    .box ul li a{
+      /*   .box ul li a:after 기준조상 (컨테이닝박스)*/
+      position: relative;
+    
+  }
+    .box ul li a:after{
+      background-color: #000;
+      transform:scale(0);
+      transform-origin: 100% 0;
+      transition:transform 0.4s;
+      content:'';
+      position: absolute;
+      left:0; bottom:0;
+      display: block;
+      width:100%;
+      height: 4px;
+    }
+    .box ul li:hover a:after{
+      /* .box ul li에 마우스를 오버하면
+      .box ul li:hover a:after의 스케일(1) 변형*/
+      transition: transform  1s;
+
+      background-color: rgba(255,0,0,0.5);
+      /* transform-origin: 0,0;    구분자가 틀렸어요    수평 공백 수직
+      */
+      transform: scale(1);
+      transform-origin: 0 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- .sample.sample1 -->
+  <div class="sample sample1">
+    <!-- .box>ul>li>a>{menu1} -->
+    <div class="box">
+      <ul>
+        <li><a href="">menu1</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

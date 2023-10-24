@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexitem의 정렬4-특정 flexitem만 다른 정렬 align-self</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    .wrap{
+      width:90%; margin:50px auto;
+      background-color: #ccc;
+    }
+    .parent{background-color: #69f;}
+    .child{
+      background-color: rgba(25,0,0,0.5); 
+      border: 1px solid #000;
+      padding:2em;
+    
+    }
+
+    /* flexbox속성 선언 */
+    /* 
+    flex container 설정
+    주축정렬 양끝여백O item사이 여백균등  justify-content
+    
+    교차축 정렬 아래  align-items
+    */
+    .container{
+      display: flex;
+      /* flex-direction: row; */
+      /* align-items: stretch; 기본값*/
+      min-height: 300px;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+
+    .item{
+      /* flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto; 
+      align-self:auto;
+      */
+    }
+    .item:last-child{
+      /* align-self: stretch; */
+      align-self: flex-start;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .parent.container>.child.item*4>{item$} -->
+    <div class="parent container">
+      <div class="child item">item1</div>
+      <div class="child item">item2</div>
+      <div class="child item">item3</div>
+      <div class="child item">item4</div>
+    </div>
+  </div>
+</body>
+</html>
